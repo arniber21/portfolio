@@ -5,6 +5,6 @@
 
 <Navbar />
 
-<div class="text-center p-3">
+<div class="text-center p-3 flex flex-col items-center">
     <slot />
 </div>
