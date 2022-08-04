@@ -5,6 +5,18 @@
 </script>
 
 <Header> Portfolio </Header>
-<Card path="#" header="Portfolio Website">
-    Portfolio Website created using SvelteKit and Tailwind.
-</Card>
+
+
+<div class="flex flex-row">
+    <Card path="#" img="PortfolioPreview.png" alt="Portfolio Image" header="Portfolio Website">
+        Portfolio Website created using SvelteKit and Tailwind. Components by Flowbite were used. 
+    </Card>
+    <Card path="https://8by8.us" img="8by8preview.png" alt="8by8 Website" header="8by8"> 
+        Major Contributor to the 8by8 Project, an app with the goal of increasing voter turnout among Asian Americans.
+        Project stack includes React and Firebase. Implemented authentication.  Contributed to various bug fixes and code structure issues. 
+    </Card>
+    <Card path="https://github.com/arniber21/svelte-todo" img="SvelteTodoPreview.png" alt="Svelte Todo Image" header="Svelte Todo Application">
+        A basic Todo application built with Svelte and Bootstrap. It shows off the basic features of the framework.
+        Bootstrap was used as styling was not too important and I just wanted it to look good.
+    </Card>
+</div>

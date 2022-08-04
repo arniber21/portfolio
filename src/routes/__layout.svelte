@@ -3,8 +3,11 @@
 	import Navbar from "../lib/Navbar/Navbar.svelte";
 </script>
 
-<Navbar />
+<svelte:head>
+    <title>Arnab Ghosh</title>
+</svelte:head>
 
-<div class="text-center p-3 flex flex-col items-center items-stretch text-black dark:text-white">
+<Navbar />
+<div class="text-center grid py-5 px-10 flex flex-col items-stretch text-black dark:text-white">
     <slot />
 </div>

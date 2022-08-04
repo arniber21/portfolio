@@ -1,3 +1,3 @@
-<span class="text-3xl">
+<span class="text-3xl font-bold">
     <slot />
 </span>
