@@ -17,3 +17,28 @@ import Header from "../lib/Header.svelte";
     because it is not finished), for which I've taken up to learning back-end web development, including REST API development, frameworks such as Express and Fastify,
     and Databases (mainly MongoDB, and SQL Databases through Prisma). I'm still a Junior at High School, and I am always learning.
 </p>
+
+<div class="flex flex-row justify-between items-stretch">
+    <div class="text-left justify-self-start max-w-2xl">
+        <h2 class="text-2xl font-bold"> Experience </h2>
+        <h5 class="text-xl"><span class="font-bold"> theCoderSchool </span> - Code Coach (August 2021 - June 2022) </h5>
+        <p> Provided private tutoring services for theCoderSchool. Topics ranged from Scratch and Python to Unreal Engine and Unity Engine.
+            Emphasized fundamentals in code quality and conceptual understanding.
+        </p>
+
+        <h5 class="text-xl"><span class="font-bold"> 8by8 </span> - Software Engineer (August 2021 - Present) </h5>
+        <p>
+            Major contributor for 8by8. Implemented Authentication and other major features via React, React Router, Firebase, and more.
+        </p>
+
+    </div>
+    <div class="text-right justify-self-end max-w-2xl">
+        <h2 class="text-2xl font-bold"> Skills </h2>
+        <h5 class="text-xl"><span class="font-bold"> Javascript/Typescript </span> - Expert </h5>
+        <h5 class="text-xl"><span class="font-bold"> React </span> - Intermediate </h5>
+        <h5 class="text-xl"><span class="font-bold"> Svelte </span> - Intermediate </h5>
+        <h5 class="text-xl"><span class="font-bold"> Firebase </span> - Intermediate </h5>
+        <h5 class="text-xl"><span class="font-bold"> MongoDB </span> - Intermediate </h5>
+
+    </div>
+</div>

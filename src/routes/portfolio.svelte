@@ -19,4 +19,10 @@
         A basic Todo application built with Svelte and Bootstrap. It shows off the basic features of the framework.
         Bootstrap was used as styling was not too important and I just wanted it to look good.
     </Card>
+    <Card header="Bindr">
+        Bindr - an app that consolidates Assignments and Courses across different LMS systems (Canvas, Google Classroom, etc).
+        I made this because it was annoying having to check assignments from many different places - and also because some LMS
+        including Schoology were very ugly. You won't find a link to this just yet - it's still in production and will potentially
+        be a startup soon.
+    </Card>
 </div>
