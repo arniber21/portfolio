@@ -25,4 +25,9 @@
         including Schoology were very ugly. You won't find a link to this just yet - it's still in production and will potentially
         be a startup soon.
     </Card>
+
+    <Card path="weather.arnabg.me" header="Svelte Weather App">
+        A basic weather app in Svelte and Bootstrap. I built this to get more comfortable with Svelte. It's pretty simple and uses
+        a prebuilt Weather API.
+    </Card>
 </div>
