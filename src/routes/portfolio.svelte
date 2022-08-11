@@ -26,7 +26,7 @@
         be a startup soon.
     </Card>
 
-    <Card path="weather.arnabg.me" header="Svelte Weather App">
+    <Card path="weather.arnabg.me" img="WeatherPreview.png" header="Svelte Weather App">
         A basic weather app in Svelte and Bootstrap. I built this to get more comfortable with Svelte. It's pretty simple and uses
         a prebuilt Weather API.
     </Card>
