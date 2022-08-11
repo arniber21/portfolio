@@ -7,7 +7,7 @@
 <Header> Portfolio </Header>
 
 
-<div class="flex flex-row">
+<div class="flex flex-row flex-wrap justify-center">
     <Card path="#" img="PortfolioPreview.png" alt="Portfolio Image" header="Portfolio Website">
         Portfolio Website created using SvelteKit and Tailwind. Components by Flowbite were used. 
     </Card>
