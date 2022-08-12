@@ -35,7 +35,7 @@
         A basic calculator built in JavaScript. Made in Svelte. I love this project because it shows off how versatile and awesome stores in Svelte are.
     </Card>
 
-    <Card path="https://url.arnabg.me" img="" header="URL Shortener">
+    <Card path="https://url.arnabg.me" img="URLPreview.png" header="URL Shortener">
         A URL shortener made in Next.js (React), Planetscale, and Prisma. My main motivation behind this project was to get used to
         the Next.JS API stuff as well as Prisma and Planetscale. Prisma in particularly is very helpful and streamlined this process.
     </Card>
