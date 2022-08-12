@@ -30,4 +30,8 @@
         A basic weather app in Svelte and Bootstrap. I built this to get more comfortable with Svelte. It's pretty simple and uses
         a prebuilt Weather API.
     </Card>
+
+    <Card path="https://calculator.arnabg.me" img="CalculatorPreview.png" header="Javascript Calculator" >
+        A basic calculator built in JavaScript. Made in Svelte. I love this project because it shows off how versatile and awesome stores in Svelte are.
+    </Card>
 </div>
