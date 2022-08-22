@@ -15,15 +15,16 @@
         Major Contributor to the 8by8 Project, an app with the goal of increasing voter turnout among Asian Americans.
         Project stack includes React and Firebase. Implemented authentication.  Contributed to various bug fixes and code structure issues. 
     </Card>
-    <Card path="https://github.com/arniber21/svelte-todo" img="SvelteTodoPreview.png" alt="Svelte Todo Image" header="Svelte Todo Application">
+    <Card path="https://todo.arnabg.me" img="SvelteTodoPreview.png" alt="Svelte Todo Image" header="Svelte Todo Application">
         A basic Todo application built with Svelte and Bootstrap. It shows off the basic features of the framework.
         Bootstrap was used as styling was not too important and I just wanted it to look good.
     </Card>
-    <Card header="Bindr">
+    <Card header="Bindr" path="https://bindr/arnabg.me" img="BindrPreview.png">
         Bindr - an app that consolidates Assignments and Courses across different LMS systems (Canvas, Google Classroom, etc).
         I made this because it was annoying having to check assignments from many different places - and also because some LMS
-        including Schoology were very ugly. You won't find a link to this just yet - it's still in production and will potentially
-        be a startup soon.
+        including Schoology were very ugly. It is the most ambitious project I've ever undertaken. It uses React as the main framework.
+        I chose Remix for this project - it is my favorite React framework, and it handled this task excellently. Tailwind for the styling,
+        and nothing else for now - Remix handles most of the things you need.
     </Card>
 
     <Card path="https://weather.arnabg.me" img="WeatherPreview.png" header="Svelte Weather App">
