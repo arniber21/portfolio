@@ -19,7 +19,7 @@
         A basic Todo application built with Svelte and Bootstrap. It shows off the basic features of the framework.
         Bootstrap was used as styling was not too important and I just wanted it to look good.
     </Card>
-    <Card header="Bindr" path="https://bindr/arnabg.me" img="BindrPreview.png">
+    <Card header="Bindr" path="https://bindr.arnabg.me" img="BindrPreview.png">
         Bindr - an app that consolidates Assignments and Courses across different LMS systems (Canvas, Google Classroom, etc).
         I made this because it was annoying having to check assignments from many different places - and also because some LMS
         including Schoology were very ugly. It is the most ambitious project I've ever undertaken. It uses React as the main framework.
