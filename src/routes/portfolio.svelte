@@ -36,6 +36,11 @@
         A basic calculator built in JavaScript. Made in Svelte. I love this project because it shows off how versatile and awesome stores in Svelte are.
     </Card>
 
+    <Card path="https://react-todo.arnabg.me" img="ReactTodoPreview.png" header="React Todo App">
+        A small todo app built in React. I made this to get comfortable with the very basics of React and get used to state management using Jotai,
+        rather than the React included State and Context API's (which are often a pain to deal with).
+    </Card>
+
     <Card path="https://url.arnabg.me" img="URLPreview.png" header="URL Shortener">
         A URL shortener made in Next.js (React), Planetscale, and Prisma. My main motivation behind this project was to get used to
         the Next.JS API stuff as well as Prisma and Planetscale. Prisma in particularly is very helpful and streamlined this process.

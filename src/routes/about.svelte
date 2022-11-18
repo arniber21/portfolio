@@ -39,7 +39,7 @@
     <div class="container columns-3 ">
         {#each paths as src}
             <div class="">
-                <Image src={src} alt=""></Image>
+                <Image src={src} alt="" />
             </div>
         {/each}
     </div>
