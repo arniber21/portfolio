@@ -22,9 +22,7 @@
     <Card header="Bindr" path="https://bindr.arnabg.me" img="BindrPreview.png">
         Bindr - an app that consolidates Assignments and Courses across different LMS systems (Canvas, Google Classroom, etc).
         I made this because it was annoying having to check assignments from many different places - and also because some LMS
-        including Schoology were very ugly. It is the most ambitious project I've ever undertaken. It uses React as the main framework.
-        I chose Remix for this project - it is my favorite React framework, and it handled this task excellently. Tailwind for the styling,
-        and nothing else for now - Remix handles most of the things you need.
+        including Schoology were very ugly. It is the most ambitious project I've ever undertaken.
     </Card>
 
     <Card path="https://weather.arnabg.me" img="WeatherPreview.png" header="Svelte Weather App">
