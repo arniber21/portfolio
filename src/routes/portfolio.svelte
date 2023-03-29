@@ -8,6 +8,9 @@
 
 
 <div class="flex flex-row flex-wrap justify-center">
+    <Card path="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4387884" img="IndependentResearch.png" alt="Research Paper" header="Independent Research">
+        Independently authored a research paper analyzing the effects of harmful tactics employed by video game companies on children, often oblivious. Published as a preprint in SSRN and SocArXiv and submitted to reivew for various Elsiever journals. 
+    </Card>
     <Card path="#" img="PortfolioPreview.png" alt="Portfolio Image" header="Portfolio Website">
         Portfolio Website created using SvelteKit and Tailwind. Components by Flowbite were used. 
     </Card>
@@ -19,27 +22,27 @@
         A basic Todo application built with Svelte and Bootstrap. It shows off the basic features of the framework.
         Bootstrap was used as styling was not too important and I just wanted it to look good.
     </Card>
-    <Card header="Bindr" path="https://bindr.arnabg.me" img="BindrPreview.png">
+    <Card header="Bindr" alt="Bindr" path="https://bindr.arnabg.me" img="BindrPreview.png">
         Bindr - an app that consolidates Assignments and Courses across different LMS systems (Canvas, Google Classroom, etc).
         I made this because it was annoying having to check assignments from many different places - and also because some LMS
-        including Schoology were very ugly. It is the most ambitious project I've ever undertaken.
+        including Schoology were very ugly. Currently on hiatus due to school work. 
     </Card>
 
-    <Card path="https://weather.arnabg.me" img="WeatherPreview.png" header="Svelte Weather App">
+    <Card path="https://weather.arnabg.me" alt="Weather App" img="WeatherPreview.png" header="Svelte Weather App">
         A basic weather app in Svelte and Bootstrap. I built this to get more comfortable with Svelte. It's pretty simple and uses
         a prebuilt Weather API.
     </Card>
 
-    <Card path="https://calculator.arnabg.me" img="CalculatorPreview.png" header="Javascript Calculator" >
+    <Card path="https://calculator.arnabg.me" alt="Calculator" img="CalculatorPreview.png" header="Javascript Calculator" >
         A basic calculator built in JavaScript. Made in Svelte. I love this project because it shows off how versatile and awesome stores in Svelte are.
     </Card>
 
-    <Card path="https://react-todo.arnabg.me" img="ReactTodoPreview.png" header="React Todo App">
+    <Card path="https://react-todo.arnabg.me" alt="Todo App" img="ReactTodoPreview.png" header="React Todo App">
         A small todo app built in React. I made this to get comfortable with the very basics of React and get used to state management using Jotai,
         rather than the React included State and Context API's (which are often a pain to deal with).
     </Card>
 
-    <Card path="https://url.arnabg.me" img="URLPreview.png" header="URL Shortener">
+    <Card path="https://url.arnabg.me" alt="URL Shortener" img="URLPreview.png" header="URL Shortener">
         A URL shortener made in Next.js (React), Planetscale, and Prisma. My main motivation behind this project was to get used to
         the Next.JS API stuff as well as Prisma and Planetscale. Prisma in particularly is very helpful and streamlined this process.
     </Card>
