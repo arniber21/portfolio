@@ -13,7 +13,7 @@
             Hello! I'm Arnab Ghosh, a student passionate about technology and coding!
         </p>
         <li>
-            I'm a <span class="font-bold">Junior</span> at Aliso Niguel High School, in Aliso Viejo, California!
+            I'm a <span class="font-bold">Senior</span> at Aliso Niguel High School, in Aliso Viejo, California!
         </li>
         <li>
             I have a <span class="font-bold">4.7</span> GPA!
