@@ -13,19 +13,13 @@
             Hello! I'm Arnab Ghosh, a student passionate about technology and coding!
         </p>
         <li>
-            I'm a <span class="font-bold">Senior</span> at Aliso Niguel High School, in Aliso Viejo, California!
+            I'm a <span class="font-bold">Freshman</span> at Cornell University in Ithaca, NY!
         </li>
         <li>
-            I have a <span class="font-bold">4.7</span> GPA!
+            I have <span class="font-bold">4 years</span> of coding experience, mostly in JS/TS, Kotlin, Java, and C++!
         </li>
         <li>
-            I've taken <span class="font-bold">12</span> Honors, AP, or College Level Classes!
-        </li>
-        <li>
-            I have <span class="font-bold">3 years</span> of coding experience, mostly in JavaScript and TypeScript!
-        </li>
-        <li>
-            I have experience with <span class="font-bold">React, Svelte, and Express</span>, and have knowledge of other JavaScript frameworks!
+            I have experience with <span class="font-bold">React, Next.js, Svelte, and Express</span>, and have knowledge of other JavaScript frameworks!
         </li>
         <li>
             I have miscellaneous experience with <span class="font-bold">Java, Kotlin, C++, and Python</span>, for a variety of reasons, including School!
