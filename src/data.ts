@@ -164,7 +164,7 @@ export const EDUCATION: Education[] = [
   {
     id: 'edu-1',
     institution: 'Cornell University',
-    degree: 'B.A. Computer Science, Mathematics, and Asian Studies',
+    degree: 'B.A. Computer Science & Mathematics, Asian Studies',
     start: 'Aug 2024',
     end: 'May 2028',
     location: 'Ithaca, NY',

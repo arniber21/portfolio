@@ -40,6 +40,7 @@
 /* Editorial signal tokens */
 :root {
   --accent: #b31b1b;
+  --accent-soft: rgba(179, 27, 27, 0.18);
   --rule: #e4e4e7;
   --muted-strong: #52525b;
   --meta-letterspacing: 0.18em;
@@ -50,6 +51,7 @@
 
 .dark {
   --accent: #b31b1b;
+  --accent-soft: rgba(229, 85, 85, 0.28);
   --rule: #3f3f46;
   --muted-strong: #a1a1aa;
   --spotlight-color: rgba(229, 85, 85, 0.2);
@@ -104,6 +106,7 @@
   }
 
   .editorial-link {
+    color: color-mix(in oklab, currentColor 88%, var(--accent) 12%);
     text-decoration: underline;
     text-decoration-color: color-mix(in oklab, var(--accent) 56%, transparent);
     text-underline-offset: 0.18em;
@@ -119,6 +122,17 @@
   .editorial-rule {
     border-top: 1px solid var(--rule);
     padding-top: 0.75rem;
+    position: relative;
+  }
+
+  .editorial-rule::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 3.25rem;
+    height: 2px;
+    background: var(--accent-soft);
   }
 
   .section-stack {
@@ -127,6 +141,10 @@
 
   .meta-italic {
     font-style: italic;
+  }
+
+  .accent-text {
+    color: color-mix(in oklab, currentColor 76%, var(--accent) 24%);
   }
 }
 

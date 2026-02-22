@@ -18,7 +18,7 @@ export default function WorkExperience() {
   return (
     <section className="section-stack">
       <p className="editorial-kicker mb-1">Professional</p>
-      <h3 className="editorial-rule mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">
+      <h3 className="editorial-rule accent-text mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">
         Work Experience
       </h3>
       <motion.div
