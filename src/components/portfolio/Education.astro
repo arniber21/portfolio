@@ -1,0 +1,58 @@
+---
+import { EDUCATION } from '../../data';
+---
+
+{EDUCATION.length > 0 && (
+  <section class="mb-10">
+    <h3 class="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">Education</h3>
+    <div class="flex flex-col gap-4">
+      {EDUCATION.map((edu) => (
+        <div class="rounded-xl px-4 py-4 border border-zinc-100 dark:border-zinc-800/60">
+          <div class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+              <p class="text-base font-semibold text-zinc-900 dark:text-zinc-100">{edu.institution}</p>
+              <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-300">{edu.degree}</p>
+            </div>
+            <div class="shrink-0 text-right pt-1">
+              <p class="whitespace-nowrap text-xs tabular-nums text-zinc-400 dark:text-zinc-500">
+                {edu.start} – {edu.end}
+              </p>
+              {edu.location && (
+                <p class="mt-0.5 whitespace-nowrap text-xs text-zinc-400 dark:text-zinc-500">
+                  {edu.location}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {edu.gpa && (
+            <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+              <span class="font-medium text-zinc-700 dark:text-zinc-300">GPA:</span>{edu.gpa}
+            </p>
+          )}
+
+          {edu.description && (
+            <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+              {edu.description}
+            </p>
+          )}
+
+          {edu.activities && edu.activities.length > 0 && (
+            <div class="mt-3">
+              <p class="mb-2 text-xs font-medium uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                Coursework &amp; Activities
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                {edu.activities.map((activity) => (
+                  <span class="rounded-full border border-zinc-200 px-2.5 py-0.5 text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
+                    {activity}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+)}

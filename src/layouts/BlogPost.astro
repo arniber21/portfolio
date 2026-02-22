@@ -12,75 +12,41 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
-
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={title} description={description} />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" crossorigin="anonymous" />
+  </head>
+  <body class="bg-white tracking-tight antialiased dark:bg-zinc-950">
+    <div class="mx-auto max-w-[960px] px-4 py-12">
+      <Header />
+      <main>
+        <article>
+          {heroImage && (
+            <div class="mb-8 overflow-hidden rounded-xl">
+              <Image
+                width={640}
+                height={320}
+                src={heroImage}
+                alt=""
+                class="w-full object-cover"
+              />
+            </div>
+          )}
+          <div class="mb-6">
+            <h1 class="mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">{title}</h1>
+            <p class="text-xs text-zinc-400 dark:text-zinc-500">
+              <FormattedDate date={pubDate} />
+              {updatedDate && (
+                <span class="italic"> · Updated <FormattedDate date={updatedDate} /></span>
+              )}
+            </p>
+          </div>
+          <div class="prose prose-zinc max-w-none dark:prose-invert prose-headings:font-semibold prose-a:text-zinc-900 dark:prose-a:text-zinc-100">
+            <slot />
+          </div>
+        </article>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
