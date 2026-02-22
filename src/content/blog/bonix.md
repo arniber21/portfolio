@@ -26,7 +26,7 @@ Sealed interfaces give you two things simultaneously: exhaustive pattern matchin
 
 ## Phase 2: Parsing and the AST
 
-The parser is a hand-written recursive-descent parser layered over the JFlex lexer. Recursive descent is the right choice here: Eta's grammar is simple enough to parse by hand, and hand-written parsers give you full control over error recovery and source location tracking.
+The parser is generated with **JCup** (Java CUP) and layered over the JFlex lexer. We define terminals from the lexer, write grammar productions for Eta/Rho constructs, and construct AST nodes directly in CUP actions. We also use CUP precedence and associativity declarations to resolve expression parsing deterministically (including the classic `if`/`else` ambiguity).
 
 Every AST node carries a source location (`file`, `line`, `column`). This is essential — every error message the compiler produces traces back to a specific position in the source. Losing location information anywhere in the pipeline produces useless diagnostics.
 

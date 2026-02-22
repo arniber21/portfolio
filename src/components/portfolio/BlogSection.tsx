@@ -6,8 +6,17 @@ export default function BlogSection() {
   if (BLOG_POSTS.length === 0) return null;
 
   return (
-    <section className="mb-10">
-      <h3 className="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">Writing</h3>
+    <section className="section-stack">
+      <p className="editorial-kicker mb-1">Notes</p>
+      <div className="editorial-rule mb-5 flex items-center justify-between gap-4">
+        <h3 className="text-sm font-medium italic text-zinc-900 dark:text-zinc-100">Writing</h3>
+        <a
+          href="/blog"
+          className="editorial-link text-xs text-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100"
+        >
+          All writing →
+        </a>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,10 +32,12 @@ export default function BlogSection() {
               key={post.uid}
               data-id={post.uid}
               href={post.link}
-              className="block rounded-lg px-3 py-2 transition-colors"
+              className="block rounded-lg border-b border-zinc-200/70 px-3 py-2 transition-colors last:border-b-0 dark:border-zinc-700/60"
             >
               <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{post.title}</p>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">{post.description}</p>
+              <p className="meta-italic text-xs text-zinc-500 dark:text-zinc-400">
+                {post.description}
+              </p>
             </a>
           ))}
         </AnimatedBackground>

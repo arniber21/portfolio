@@ -21,6 +21,10 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.4 } },
 };
 
+function externalLinkLabel(link: string) {
+  return link.includes('github.com') ? 'GitHub' : 'Website';
+}
+
 function TagPills({ tags, awards }: { tags?: string[]; awards?: string[] }) {
   const hasContent = (tags?.length ?? 0) > 0 || (awards?.length ?? 0) > 0;
   if (!hasContent) return null;
@@ -50,10 +54,17 @@ export default function Projects() {
   if (PROJECTS.length === 0) return null;
 
   return (
-    <section className="mb-10">
-      <h3 className="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">
-        Selected Projects
-      </h3>
+    <section className="section-stack">
+      <p className="editorial-kicker mb-1">Selected Work</p>
+      <div className="editorial-rule mb-5 flex items-center justify-between gap-4">
+        <h3 className="text-sm font-medium italic text-zinc-900 dark:text-zinc-100">Projects</h3>
+        <a
+          href="/projects"
+          className="editorial-link text-xs text-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100"
+        >
+          All projects →
+        </a>
+      </div>
       <motion.div
         className="grid grid-cols-1 gap-3 sm:grid-cols-2"
         variants={containerVariants}
@@ -65,7 +76,7 @@ export default function Projects() {
             <MorphingDialog>
               <MorphingDialogTrigger className="h-full w-full text-left">
                 <SpotlightCard className="flex h-full flex-col rounded-xl border border-zinc-100 p-4 dark:border-zinc-800">
-                  <p className="mb-1 text-sm font-medium text-zinc-900 underline-offset-2 hover:underline dark:text-zinc-100">
+                  <p className="mb-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
                     {project.name}
                   </p>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -93,7 +104,7 @@ export default function Projects() {
                     {project.blogSlug && (
                       <a
                         href={`/blog/${project.blogSlug}`}
-                        className="text-xs font-medium text-zinc-700 underline underline-offset-2 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100"
+                        className="editorial-link text-xs font-medium text-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-100"
                       >
                         Read post →
                       </a>
@@ -103,9 +114,9 @@ export default function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-zinc-400 underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-100"
+                        className="editorial-link text-xs text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
                       >
-                        GitHub →
+                        {externalLinkLabel(project.link)} →
                       </a>
                     )}
                   </div>

@@ -4,7 +4,7 @@ import { Magnetic } from '../ui/Magnetic';
 export default function Connect() {
   return (
     <section className="mb-4">
-      <h3 className="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">Connect</h3>
+      <h3 className="mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">Connect</h3>
       <div className="flex flex-col gap-3">
         <a
           href={`mailto:${EMAIL}`}

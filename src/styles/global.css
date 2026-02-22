@@ -1,11 +1,60 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist";
-@import "@fontsource-variable/geist-mono";
 
 @plugin "@tailwindcss/typography";
 
 /* Class-based dark mode toggled by adding .dark to <html> */
 @custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Scala Sans Comp Pro";
+  src: url("/fonts/ScalaSansCompPro.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Scala Sans Comp Pro";
+  src: url("/fonts/ScalaSansCompPro-Ita.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Scala Sans Comp Pro";
+  src: url("/fonts/ScalaSansCompPro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Scala Sans Comp Pro";
+  src: url("/fonts/ScalaSansCompPro-BoldIta.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Editorial signal tokens */
+:root {
+  --accent: #b31b1b;
+  --rule: #e4e4e7;
+  --muted-strong: #52525b;
+  --meta-letterspacing: 0.18em;
+  --section-gap: 2.75rem;
+  --spotlight-color: rgba(179, 27, 27, 0.16);
+  --math-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='%23b31b1b' fill-opacity='0.09' font-family='Iosevka, monospace' font-size='13'%3E%3Ctext x='16' y='24'%3E%26%23915%3B%20%26%238866%3B%20e%20:%20%26%23964%3B%3C/text%3E%3Ctext x='162' y='34'%3E%26%238704%3Bx.%20P(x)%20%26%238594%3B%20Q(x)%3C/text%3E%3Ctext x='24' y='68'%3E%26%23957%3BX.%20%5Ba%5DX%20%26%238743%3B%20%5Bb%5Dff%3C/text%3E%3Ctext x='190' y='82'%3E%26%239633%3B(p%20%26%238594%3B%20q)%20%26%238743%3B%20%26%239671%3Bp%3C/text%3E%3Ctext x='42' y='112'%3E%26%238868%3B%20%26%238743%3B%20%26%238869%3B%20%26%238744%3B%20p%3C/text%3E%3Ctext x='178' y='126'%3E%26%23945%3B%20%26%238594%3B%20%26%23946%3B%20:%20%26%23947%3B%3C/text%3E%3Ctext x='20' y='156'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3B%20:%20%26%23964%3B%26%238321%3B%20%26%238594%3B%20%26%23964%3B%26%238322%3B%3C/text%3E%3Ctext x='176' y='172'%3E%26%23915%3B%20%26%238866%3B%20e%26%238322%3B%20:%20%26%23964%3B%26%238321%3B%3C/text%3E%3Ctext x='58' y='200'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3Be%26%238322%3B%20:%20%26%23964%3B%26%238322%3B%3C/text%3E%3C/g%3E%3Cg fill='%23b31b1b' fill-opacity='0.055' font-family='Scala Sans Comp Pro, serif' font-size='18'%3E%3Ctext x='286' y='18'%3E%26%239633%3B%20%26%239671%3B%3C/text%3E%3Ctext x='286' y='206'%3E%26%238868%3B%20%26%238869%3B%3C/text%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark {
+  --accent: #b31b1b;
+  --rule: #3f3f46;
+  --muted-strong: #a1a1aa;
+  --spotlight-color: rgba(229, 85, 85, 0.2);
+  --math-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='%23e55555' fill-opacity='0.12' font-family='Iosevka, monospace' font-size='13'%3E%3Ctext x='16' y='24'%3E%26%23915%3B%20%26%238866%3B%20e%20:%20%26%23964%3B%3C/text%3E%3Ctext x='162' y='34'%3E%26%238704%3Bx.%20P(x)%20%26%238594%3B%20Q(x)%3C/text%3E%3Ctext x='24' y='68'%3E%26%23957%3BX.%20%5Ba%5DX%20%26%238743%3B%20%5Bb%5Dff%3C/text%3E%3Ctext x='190' y='82'%3E%26%239633%3B(p%20%26%238594%3B%20q)%20%26%238743%3B%20%26%239671%3Bp%3C/text%3E%3Ctext x='42' y='112'%3E%26%238868%3B%20%26%238743%3B%20%26%238869%3B%20%26%238744%3B%20p%3C/text%3E%3Ctext x='178' y='126'%3E%26%23945%3B%20%26%238594%3B%20%26%23946%3B%20:%20%26%23947%3B%3C/text%3E%3Ctext x='20' y='156'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3B%20:%20%26%23964%3B%26%238321%3B%20%26%238594%3B%20%26%23964%3B%26%238322%3B%3C/text%3E%3Ctext x='176' y='172'%3E%26%23915%3B%20%26%238866%3B%20e%26%238322%3B%20:%20%26%23964%3B%26%238321%3B%3C/text%3E%3Ctext x='58' y='200'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3Be%26%238322%3B%20:%20%26%23964%3B%26%238322%3B%3C/text%3E%3C/g%3E%3Cg fill='%23e55555' fill-opacity='0.075' font-family='Scala Sans Comp Pro, serif' font-size='18'%3E%3Ctext x='286' y='18'%3E%26%239633%3B%20%26%239671%3B%3C/text%3E%3Ctext x='286' y='206'%3E%26%238868%3B%20%26%238869%3B%3C/text%3E%3C/g%3E%3C/svg%3E");
+}
 
 /* Tailwind v4 border color compatibility */
 @layer base {
@@ -18,8 +67,66 @@
   }
 
   html {
-    font-family: "Geist Variable", sans-serif;
+    font-family: "Scala Sans Comp Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
     font-size: 17px;
+  }
+
+  body {
+    background-image: var(--math-pattern);
+    background-size: 360px 220px;
+    background-attachment: fixed;
+    background-position: center top;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: "Iosevka", "Iosevka Term", "Geist Mono Variable", ui-monospace, SFMono-Regular,
+      Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  em,
+  i {
+    font-style: italic;
+    color: color-mix(in oklab, currentColor 82%, var(--accent) 18%);
+  }
+}
+
+@layer utilities {
+  .editorial-kicker {
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: var(--meta-letterspacing);
+    text-transform: uppercase;
+  }
+
+  .editorial-link {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--accent) 56%, transparent);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 0.08em;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  .editorial-link:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  .editorial-rule {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.75rem;
+  }
+
+  .section-stack {
+    margin-bottom: var(--section-gap);
+  }
+
+  .meta-italic {
+    font-style: italic;
   }
 }
 

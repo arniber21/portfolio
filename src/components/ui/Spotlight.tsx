@@ -41,7 +41,7 @@ export function Spotlight({
     mouseY.set(-size);
   }, [mouseX, mouseY, size]);
 
-  const background = useMotionTemplate`radial-gradient(${size}px circle at ${springX}px ${springY}px, var(--spotlight-color, rgba(120,120,120,0.12)), transparent 80%)`;
+  const background = useMotionTemplate`radial-gradient(${size}px circle at ${springX}px ${springY}px, var(--spotlight-color, rgba(179,27,27,0.16)), transparent 80%)`;
 
   return (
     <div
@@ -90,7 +90,7 @@ export function SpotlightCard({ children, className, spotlightSize = 200 }: Spot
     mouseY.set(-spotlightSize);
   }, [mouseX, mouseY, spotlightSize]);
 
-  const background = useMotionTemplate`radial-gradient(${spotlightSize}px circle at ${springX}px ${springY}px, rgba(120,120,120,0.1), transparent 80%)`;
+  const background = useMotionTemplate`radial-gradient(${spotlightSize}px circle at ${springX}px ${springY}px, var(--spotlight-color, rgba(179,27,27,0.14)), transparent 80%)`;
 
   return (
     <div

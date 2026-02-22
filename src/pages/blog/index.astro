@@ -22,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
       <Header />
       <main>
         <section>
-          <h3 class="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">All Posts</h3>
+          <h3 class="mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">All Posts</h3>
           <ul class="flex flex-col gap-3">
             {posts.map((post) => (
               <li>

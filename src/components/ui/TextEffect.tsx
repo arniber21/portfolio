@@ -11,7 +11,7 @@ type PresetType = 'blur' | 'fade-in-blur' | 'scale' | 'fade' | 'slide';
 type PerType = 'word' | 'char' | 'line';
 
 type TextEffectProps = {
-  children: string;
+  children: React.ReactNode;
   per?: PerType;
   as?: ElementType;
   variants?: {
@@ -101,6 +101,17 @@ function splitIntoSegments(text: string, per: PerType): string[] {
   return text.split('');
 }
 
+function normalizeText(children: React.ReactNode): string {
+  return React.Children.toArray(children)
+    .map((child) => {
+      if (typeof child === 'string' || typeof child === 'number') {
+        return String(child);
+      }
+      return '';
+    })
+    .join('');
+}
+
 export function TextEffect({
   children,
   per = 'word',
@@ -138,7 +149,8 @@ export function TextEffect({
     },
   };
 
-  const segments = splitIntoSegments(children, per);
+  const text = normalizeText(children);
+  const segments = splitIntoSegments(text, per);
   const MotionTag = motion.create(Tag as keyof JSX.IntrinsicElements);
 
   return (

@@ -1,10 +1,10 @@
 ---
-import { TextEffect } from './ui/TextEffect';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="mb-12">
-  <div class="mb-1 flex items-start justify-between">
+<header class="mb-6 border-b border-zinc-200 pb-6 dark:border-zinc-800">
+  <p class="editorial-kicker mb-2">Portfolio</p>
+  <div class="mb-2 flex items-start justify-between">
     <a
       href="/"
       class="text-2xl font-semibold tracking-tight text-zinc-900 no-underline transition-opacity hover:opacity-70 dark:text-zinc-100"
@@ -12,16 +12,16 @@ import { SITE_TITLE } from '../consts';
       {SITE_TITLE}
     </a>
     <nav class="flex items-center gap-4 pt-1 text-sm text-zinc-500 dark:text-zinc-400">
-      <a href="/blog" class="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">Blog</a>
+      <a href="/projects" class="editorial-link transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+        >Projects</a
+      >
+      <a href="/blog" class="editorial-link transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+        >Blog</a
+      >
     </nav>
   </div>
-  <TextEffect
-    per="word"
-    preset="fade-in-blur"
-    as="p"
-    className="text-base text-zinc-500 dark:text-zinc-400"
-    client:only="react"
-  >
-    CS & Mathematics · Cornell University test
-  </TextEffect>
+  <p class="text-base text-zinc-600 dark:text-zinc-400">
+    <em>CS & Mathematics & Asian Studies</em> · Cornell University · U.S. Top Secret Security
+    Clearance
+  </p>
 </header>

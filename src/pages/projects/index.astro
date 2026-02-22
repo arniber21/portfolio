@@ -1,0 +1,68 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { ALL_PROJECTS } from '../../data';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const projects = ALL_PROJECTS;
+const externalLinkLabel = (link: string) => (link.includes('github.com') ? 'GitHub' : 'Website');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Projects · ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-white tracking-tight antialiased dark:bg-zinc-950">
+    <div class="mx-auto max-w-[960px] px-4 py-12">
+      <Header />
+      <main>
+        <section>
+          <p class="editorial-kicker mb-1">Archive</p>
+          <h3 class="editorial-rule mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">
+            All Projects
+          </h3>
+          <ul class="flex flex-col gap-3">
+            {projects.map((project) => (
+              <li class="rounded-xl border border-zinc-200/85 px-4 py-3 dark:border-zinc-700/70">
+                <div class="mb-1 flex items-center justify-between gap-4">
+                  <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">{project.name}</p>
+                  {project.period && (
+                    <p class="meta-italic text-xs tabular-nums text-zinc-400 dark:text-zinc-500">
+                      {project.period}
+                    </p>
+                  )}
+                </div>
+                <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  {project.description}
+                </p>
+                <div class="mt-3 flex items-center gap-4">
+                  {project.blogSlug && (
+                    <a
+                      href={`/blog/${project.blogSlug}`}
+                      class="editorial-link text-xs font-medium text-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-100"
+                    >
+                      Read post →
+                    </a>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="editorial-link text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      {externalLinkLabel(project.link)} →
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

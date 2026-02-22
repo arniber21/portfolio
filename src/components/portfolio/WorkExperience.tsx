@@ -16,8 +16,11 @@ export default function WorkExperience() {
   if (WORK_EXPERIENCE.length === 0) return null;
 
   return (
-    <section className="mb-10">
-      <h3 className="mb-5 text-sm font-medium text-zinc-900 dark:text-zinc-100">Work Experience</h3>
+    <section className="section-stack">
+      <p className="editorial-kicker mb-1">Professional</p>
+      <h3 className="editorial-rule mb-5 text-sm font-medium italic text-zinc-900 dark:text-zinc-100">
+        Work Experience
+      </h3>
       <motion.div
         className="flex flex-col gap-3"
         variants={containerVariants}
@@ -26,21 +29,19 @@ export default function WorkExperience() {
       >
         {WORK_EXPERIENCE.map((job) => (
           <motion.div key={job.id} variants={itemVariants}>
-            <SpotlightCard className="rounded-xl px-4 py-3">
+            <SpotlightCard className="rounded-xl border border-zinc-200/85 px-4 py-3 dark:border-zinc-700/70">
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{job.title}</p>
+                  <a
+                    href={`/work/${job.detailsSlug}`}
+                    className="editorial-link text-sm font-medium text-zinc-900 dark:text-zinc-100"
+                  >
+                    {job.title}
+                  </a>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    <a
-                      href={job.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline-offset-2 hover:underline"
-                    >
-                      {job.company}
-                    </a>
+                    {job.company}
                     {job.location && (
-                      <span className="text-zinc-400 dark:text-zinc-500">
+                      <span className="meta-italic text-zinc-400 dark:text-zinc-500">
                         {' · '}{job.location}
                       </span>
                     )}
@@ -50,8 +51,24 @@ export default function WorkExperience() {
                       {job.description}
                     </p>
                   )}
+                  <div className="mt-3 flex items-center gap-4">
+                    <a
+                      href={`/work/${job.detailsSlug}`}
+                      className="editorial-link text-xs font-medium text-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-100"
+                    >
+                      Read details →
+                    </a>
+                    <a
+                      href={job.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="editorial-link text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      Company site →
+                    </a>
+                  </div>
                 </div>
-                <span className="shrink-0 whitespace-nowrap text-xs tabular-nums text-zinc-400 dark:text-zinc-500 pt-0.5">
+                <span className="meta-italic shrink-0 whitespace-nowrap text-xs tabular-nums text-zinc-400 dark:text-zinc-500 pt-0.5">
                   {job.start} – {job.end}
                 </span>
               </div>
