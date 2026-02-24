@@ -90,7 +90,7 @@ export const ALL_PROJECTS: Project[] = [
     period: 'October 2025',
     description:
       'Built a Next.js 15 + TypeScript platform where engineers define distributed-system requirements in a YAML DSL and run a Z3-backed CEGIS loop with GPT-4-guided synthesis/repair until invariants are formally discharged.',
-    link: 'https://github.com/arniber21/guardrails',
+    link: 'https://github.com/smyansengupta/guardrails-atomic',
     video: '',
     featured: true,
     tags: ['Formal Verification', 'Distributed Systems', 'Agentic Systems', 'TypeScript'],
