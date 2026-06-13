@@ -7,11 +7,8 @@ export default function BlogSection() {
 
   return (
     <section className="section-stack">
-      <p className="editorial-kicker mb-1">Notes</p>
       <div className="editorial-rule mb-5 flex items-center justify-between gap-4">
-        <h3 className="accent-text text-sm font-medium italic text-zinc-900 dark:text-zinc-100">
-          Writing
-        </h3>
+        <p className="editorial-kicker">Technical Writing</p>
         <a
           href="/blog"
           className="editorial-link text-xs text-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100"

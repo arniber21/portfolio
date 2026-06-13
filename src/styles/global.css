@@ -37,6 +37,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "KaTeX Math";
+  src: url("/fonts/KaTeX_Math-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KaTeX Main";
+  src: url("/fonts/KaTeX_Main-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* Editorial signal tokens */
 :root {
   --accent: #b31b1b;
@@ -46,7 +62,7 @@
   --meta-letterspacing: 0.18em;
   --section-gap: 2.75rem;
   --spotlight-color: rgba(179, 27, 27, 0.16);
-  --math-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='%23b31b1b' fill-opacity='0.09' font-family='Iosevka, monospace' font-size='13'%3E%3Ctext x='16' y='24'%3E%26%23915%3B%20%26%238866%3B%20e%20:%20%26%23964%3B%3C/text%3E%3Ctext x='162' y='34'%3E%26%238704%3Bx.%20P(x)%20%26%238594%3B%20Q(x)%3C/text%3E%3Ctext x='24' y='68'%3E%26%23957%3BX.%20%5Ba%5DX%20%26%238743%3B%20%5Bb%5Dff%3C/text%3E%3Ctext x='190' y='82'%3E%26%239633%3B(p%20%26%238594%3B%20q)%20%26%238743%3B%20%26%239671%3Bp%3C/text%3E%3Ctext x='42' y='112'%3E%26%238868%3B%20%26%238743%3B%20%26%238869%3B%20%26%238744%3B%20p%3C/text%3E%3Ctext x='178' y='126'%3E%26%23945%3B%20%26%238594%3B%20%26%23946%3B%20:%20%26%23947%3B%3C/text%3E%3Ctext x='20' y='156'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3B%20:%20%26%23964%3B%26%238321%3B%20%26%238594%3B%20%26%23964%3B%26%238322%3B%3C/text%3E%3Ctext x='176' y='172'%3E%26%23915%3B%20%26%238866%3B%20e%26%238322%3B%20:%20%26%23964%3B%26%238321%3B%3C/text%3E%3Ctext x='58' y='200'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3Be%26%238322%3B%20:%20%26%23964%3B%26%238322%3B%3C/text%3E%3C/g%3E%3Cg fill='%23b31b1b' fill-opacity='0.055' font-family='Scala Sans Comp Pro, serif' font-size='18'%3E%3Ctext x='286' y='18'%3E%26%239633%3B%20%26%239671%3B%3C/text%3E%3Ctext x='286' y='206'%3E%26%238868%3B%20%26%238869%3B%3C/text%3E%3C/g%3E%3C/svg%3E");
+  --math-symbol-color: rgba(179, 27, 27, 0.09);
 }
 
 .dark {
@@ -55,7 +71,7 @@
   --rule: #3f3f46;
   --muted-strong: #a1a1aa;
   --spotlight-color: rgba(229, 85, 85, 0.2);
-  --math-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='%23e55555' fill-opacity='0.12' font-family='Iosevka, monospace' font-size='13'%3E%3Ctext x='16' y='24'%3E%26%23915%3B%20%26%238866%3B%20e%20:%20%26%23964%3B%3C/text%3E%3Ctext x='162' y='34'%3E%26%238704%3Bx.%20P(x)%20%26%238594%3B%20Q(x)%3C/text%3E%3Ctext x='24' y='68'%3E%26%23957%3BX.%20%5Ba%5DX%20%26%238743%3B%20%5Bb%5Dff%3C/text%3E%3Ctext x='190' y='82'%3E%26%239633%3B(p%20%26%238594%3B%20q)%20%26%238743%3B%20%26%239671%3Bp%3C/text%3E%3Ctext x='42' y='112'%3E%26%238868%3B%20%26%238743%3B%20%26%238869%3B%20%26%238744%3B%20p%3C/text%3E%3Ctext x='178' y='126'%3E%26%23945%3B%20%26%238594%3B%20%26%23946%3B%20:%20%26%23947%3B%3C/text%3E%3Ctext x='20' y='156'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3B%20:%20%26%23964%3B%26%238321%3B%20%26%238594%3B%20%26%23964%3B%26%238322%3B%3C/text%3E%3Ctext x='176' y='172'%3E%26%23915%3B%20%26%238866%3B%20e%26%238322%3B%20:%20%26%23964%3B%26%238321%3B%3C/text%3E%3Ctext x='58' y='200'%3E%26%23915%3B%20%26%238866%3B%20e%26%238321%3Be%26%238322%3B%20:%20%26%23964%3B%26%238322%3B%3C/text%3E%3C/g%3E%3Cg fill='%23e55555' fill-opacity='0.075' font-family='Scala Sans Comp Pro, serif' font-size='18'%3E%3Ctext x='286' y='18'%3E%26%239633%3B%20%26%239671%3B%3C/text%3E%3Ctext x='286' y='206'%3E%26%238868%3B%20%26%238869%3B%3C/text%3E%3C/g%3E%3C/svg%3E");
+  --math-symbol-color: rgba(229, 85, 85, 0.12);
 }
 
 /* Tailwind v4 border color compatibility */
@@ -75,10 +91,68 @@
   }
 
   body {
-    background-image: var(--math-pattern);
-    background-size: 360px 220px;
-    background-attachment: fixed;
-    background-position: center top;
+    position: relative;
+    isolation: isolate;
+  }
+
+  body::before {
+    content:
+      "\0393  \22A2  e : \03C4        \2200 x. P(x) \21D2 Q(x)        \03C6 (p \21D2 q) \2227 \00AC p\A"
+      "    \03BD X. [a]X \2227 [b]ff        \22A8  \2227  \22A9  \2228 p        \03B1  \2192  \03B2  :  \03B3\A"
+      "          \0393  \22A2  e\2081  : \03C4\2081  \21D2  \03C4\2082        \0393  \22A2  e\2082  : \03C4\2081\A"
+      "  \2203 y. R(y) \2227 S(y)        \03BB x. x : \03B1  \2192  \03B1        \2297  \22A3  \22A2\A"
+      "\0394, \0393  \22A8  \03C8        \03BC X. \27E8 a \27E9 X \2228 \27E8 b \27E9 tt        \03C0 : \03A0 i. A\1D62\A"
+      "       \22A2  \03C3  \2261  \03C4        \222B f(x) dx        \2211 n\207B\00B2        \03B7 \2081 \2218 \03B7 \2082\A"
+      " \0393  \22A2  e : \03C4        \2200 x. P(x) \21D2 Q(x)        \03C6 (p \21D2 q) \2227 \00AC p\A"
+      "    \03BD X. [a]X \2227 [b]ff        \22A8  \2227  \22A9  \2228 p        \03B1  \2192  \03B2  :  \03B3\A"
+      "          \0393  \22A2  e\2081  : \03C4\2081  \21D2  \03C4\2082        \0393  \22A2  e\2082  : \03C4\2081\A"
+      "  \2203 y. R(y) \2227 S(y)        \03BB x. x : \03B1  \2192  \03B1        \2297  \22A3  \22A2\A"
+      "\0394, \0393  \22A8  \03C8        \03BC X. \27E8 a \27E9 X \2228 \27E8 b \27E9 tt        \03C0 : \03A0 i. A\1D62\A"
+      "       \22A2  \03C3  \2261  \03C4        \222B f(x) dx        \2211 n\207B\00B2        \03B7 \2081 \2218 \03B7 \2082\A"
+      "\0393  \22A2  e : \03C4        \2200 x. P(x) \21D2 Q(x)        \03C6 (p \21D2 q) \2227 \00AC p\A"
+      "    \03BD X. [a]X \2227 [b]ff        \22A8  \2227  \22A9  \2228 p        \03B1  \2192  \03B2  :  \03B3\A"
+      "          \0393  \22A2  e\2081  : \03C4\2081  \21D2  \03C4\2082        \0393  \22A2  e\2082  : \03C4\2081\A"
+      "  \2203 y. R(y) \2227 S(y)        \03BB x. x : \03B1  \2192  \03B1        \2297  \22A3  \22A2\A"
+      "\0394, \0393  \22A8  \03C8        \03BC X. \27E8 a \27E9 X \2228 \27E8 b \27E9 tt        \03C0 : \03A0 i. A\1D62\A"
+      "       \22A2  \03C3  \2261  \03C4        \222B f(x) dx        \2211 n\207B\00B2        \03B7 \2081 \2218 \03B7 \2082\A"
+      " \0393  \22A2  e : \03C4        \2200 x. P(x) \21D2 Q(x)        \03C6 (p \21D2 q) \2227 \00AC p\A"
+      "    \03BD X. [a]X \2227 [b]ff        \22A8  \2227  \22A9  \2228 p        \03B1  \2192  \03B2  :  \03B3\A"
+      "          \0393  \22A2  e\2081  : \03C4\2081  \21D2  \03C4\2082        \0393  \22A2  e\2082  : \03C4\2081\A"
+      "  \2203 y. R(y) \2227 S(y)        \03BB x. x : \03B1  \2192  \03B1        \2297  \22A3  \22A2\A"
+      "\0394, \0393  \22A8  \03C8        \03BC X. \27E8 a \27E9 X \2228 \27E8 b \27E9 tt        \03C0 : \03A0 i. A\1D62\A"
+      "       \22A2  \03C3  \2261  \03C4        \222B f(x) dx        \2211 n\207B\00B2        \03B7 \2081 \2218 \03B7 \2082";
+    position: fixed;
+    inset: -4rem -8rem;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    padding: 1rem 0;
+    color: var(--math-symbol-color);
+    display: block;
+    font-family: "KaTeX Math", "KaTeX Main", "STIX Two Math", "Cambria Math", serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 2.9;
+    letter-spacing: 0;
+    white-space: pre;
+    min-width: 120rem;
+    min-height: 120rem;
+    text-shadow:
+      30rem 6rem 0 var(--math-symbol-color),
+      62rem 1rem 0 var(--math-symbol-color),
+      94rem 9rem 0 var(--math-symbol-color),
+      14rem 34rem 0 var(--math-symbol-color),
+      48rem 41rem 0 var(--math-symbol-color),
+      82rem 32rem 0 var(--math-symbol-color),
+      112rem 38rem 0 var(--math-symbol-color),
+      28rem 72rem 0 var(--math-symbol-color),
+      66rem 78rem 0 var(--math-symbol-color),
+      102rem 68rem 0 var(--math-symbol-color);
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
   }
 
   code,

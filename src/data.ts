@@ -19,6 +19,7 @@ export type WorkExperience = {
   end: string;
   link: string;
   detailsSlug: string;
+  accent?: 'baby-blue';
   location?: string;
   description?: string;
 };
@@ -123,6 +124,19 @@ export const PROJECTS: Project[] = ALL_PROJECTS.filter((project) => project.feat
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    id: 'work-4',
+    company: 'Intel',
+    title: 'Compiler Engineering Intern',
+    start: 'Jun 2026',
+    end: 'Present',
+    link: 'https://www.intel.com',
+    detailsSlug: 'intel-compiler-engineering-internship',
+    accent: 'baby-blue',
+    location: 'San Jose, CA',
+    description:
+      'Performance tracking and analysis on the Intel oneAPI C++/C/Fortran compiler (ICX), GCC, and LLVM, focusing on unlocking vectorization. Work spans performance engineering, compiler optimization debugging, and vectorized Intel assembly analysis.',
+  },
+  {
     id: 'work-1',
     company: 'HRL Laboratories',
     title: 'Software Engineering Intern — Quantum Technology',
@@ -144,7 +158,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     detailsSlug: 'cmsx-lead-engineer',
     location: 'Ithaca, NY',
     description:
-      "Lead for CMSX, Cornell's in-house course management system. Modernizing tightly coupled XML and legacy JSP to modern Java REST APIs and type-safe React frontends.",
+      "Lead for CMSX, Cornell's in-house course management system serving thousands of students across hundreds of courses each semester. Modernizing tightly coupled XML and legacy JSP to modern Java REST APIs and type-safe React frontends.",
   },
   {
     id: 'work-2',
@@ -170,7 +184,7 @@ export const EDUCATION: Education[] = [
     location: 'Ithaca, NY',
     gpa: ' 3.81/4.0',
     description:
-      'Emphasis on programming languages, compilers, runtime verification, formal verification, and applied logic. Also majored in mathematics, focused on different logical systems and algebras. Picked up a major in Asian Studies, with an emphasis on the Korean language and the history of Korea. ',
+      'Emphasis on programming languages, compilers, runtime verification, formal verification, and applied logic. Also majored in mathematics, focused on different logical systems and algebras.',
     activities: [
       'CS 4110: Programming Languages',
       'CS 4120: Compilers',
